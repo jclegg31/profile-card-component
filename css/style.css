@@ -8,23 +8,116 @@
   --clr-neutral-dkgray: hsl(0, 0%, 59%);
 }
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
   font-size: 18px; /* name and Stats */
   background-color: var(--clr-darkcyan);
-  height: 100vh;
+  min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 48vw bottom 40vh, left 45vw top 44vh;
 }
 
 .card {
   background-color: #fff;
-  width: 375px;
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 325px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+}
+
+.main-image-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bg-pattern-card {
+  width: 100%;
+}
+
+.victor-photo {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -14%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.main-content h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.age {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  color: var(--clr-grayblue-secondarytext);
+}
+
+.main-content p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+  color: var(--clr-grayblue-secondarytext);
+}
+
+.separator-line::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--clr-grayblue-secondarytext);
+  opacity: 0.2;
+}
+
+.stats {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.followers,
+.likes,
+.photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.followers p,
+.likes p,
+.photos p {
+  color: var(--clr-grayblue-secondarytext);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  margin-top: 0.3rem;
 }
 
 .attribution {
